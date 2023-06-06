@@ -1,0 +1,44 @@
+
+
+body{
+    background-color: rgb(77, 77, 77);
+}
+
+.elemento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashed{
+    text-decoration: line-through;
+    color: gray;
+    font-style: oblique;
+}
+
+.task{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.main{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+footer > p{
+    padding-top: 20px;
+}

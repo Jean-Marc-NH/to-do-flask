@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+        <div class="container py-5">
+            <form action="" method="post">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Add text" name="tarea" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="submit" value="add" name="act1" id="button-addon2">Button</button>
+                </div>
+                <ul class="list-group">
+                    {% for i in task %}
+                        <li class="list-group-item elemento" value="{{i}}" name="task-id">
+                            <input class="form-check-input me-1 elemento-2" type="checkbox"><label class="form-check-label task" for="firstCheckbox">{{task[i]}}</label>
+                            <button class="btn btn-danger" value="{{i}}" name="sup" type="submit">X</button>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <br>
+                <button class="btn btn-danger" value="del" name="act2" type="submit">clear</button>
+            </form>
+
+        </div>
+    <script>
+        delButton = document.querySelectorAll(".me-1")
+
+        for (let i = 0; i < delButton.length; i++) {
+            delButton[i].onclick = function() {
+              var li = this.parentElement;
+              li.classList.toggle('dashed')
+            }
+        }
+    </script>
+
+{% endblock %}
